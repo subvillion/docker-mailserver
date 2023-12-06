@@ -12,13 +12,13 @@
         <meta name="author" content="docker-mailserver (Github Organization)">
       
       
-        <link rel="canonical" href="https://docker-mailserver.github.io/docker-mailserver/edge/config/advanced/ipv6/">
+        <link rel="canonical" href="https://docker-mailserver.github.io/docker-mailserver/edge/examples/use-cases/ios-mail-push-support/">
       
       
-        <link rel="prev" href="../kubernetes/">
+        <link rel="prev" href="../imap-folders/">
       
       
-        <link rel="next" href="../podman/">
+        <link rel="next" href="../auth-lua/">
       
       
       <link rel="icon" href="../../../assets/logo/favicon-32x32.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Advanced | IPv6 - Docker Mailserver</title>
+        <title>Advanced | iOS Mail Push Support - Docker Mailserver</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ipv6-networking-problems-with-docker-defaults" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced | IPv6
+              Advanced | iOS Mail Push Support
             
           </span>
         </div>
@@ -273,13 +273,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../environment/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../config/environment/" class="md-tabs__link">
           
   
   Configuration
@@ -293,17 +291,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../examples/tutorials/basic-installation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../tutorials/basic-installation/" class="md-tabs__link">
           
   
   Examples
@@ -491,19 +493,19 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -516,7 +518,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Configuration
@@ -529,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment/" class="md-nav__link">
+      <a href="../../../config/environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-management/" class="md-nav__link">
+      <a href="../../../config/user-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/dkim_dmarc_spf/" class="md-nav__link">
+      <a href="../../../config/best-practices/dkim_dmarc_spf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/autodiscover/" class="md-nav__link">
+      <a href="../../../config/best-practices/autodiscover/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/understanding-the-ports/" class="md-nav__link">
+      <a href="../../../config/security/understanding-the-ports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/ssl/" class="md-nav__link">
+      <a href="../../../config/security/ssl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/fail2ban/" class="md-nav__link">
+      <a href="../../../config/security/fail2ban/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/mail_crypt/" class="md-nav__link">
+      <a href="../../../config/security/mail_crypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/rspamd/" class="md-nav__link">
+      <a href="../../../config/security/rspamd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../debugging/" class="md-nav__link">
+      <a href="../../../config/debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pop3/" class="md-nav__link">
+      <a href="../../../config/pop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup.sh/" class="md-nav__link">
+      <a href="../../../config/setup.sh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,19 +857,19 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
         
           <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
             
@@ -880,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
             Advanced Configuration
@@ -893,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../optional-config/" class="md-nav__link">
+      <a href="../../../config/advanced/optional-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -949,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maintenance/update-and-cleanup/" class="md-nav__link">
+      <a href="../../../config/advanced/maintenance/update-and-cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../override-defaults/dovecot/" class="md-nav__link">
+      <a href="../../../config/advanced/override-defaults/dovecot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../override-defaults/postfix/" class="md-nav__link">
+      <a href="../../../config/advanced/override-defaults/postfix/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1053,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../override-defaults/user-patches/" class="md-nav__link">
+      <a href="../../../config/advanced/override-defaults/user-patches/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth-ldap/" class="md-nav__link">
+      <a href="../../../config/advanced/auth-ldap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-sieve/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-sieve/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1121,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-fetchmail/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-fetchmail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-getmail/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-getmail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-forwarding/relay-hosts/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-forwarding/relay-hosts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-forwarding/aws-ses/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-forwarding/aws-ses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-text-search/" class="md-nav__link">
+      <a href="../../../config/advanced/full-text-search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../../../config/advanced/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1283,27 +1285,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    IPv6
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../config/advanced/ipv6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,85 +1296,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ipv6-networking-problems-with-docker-defaults" class="md-nav__link">
-    IPv6 networking problems with Docker defaults
-  </a>
-  
-    <nav class="md-nav" aria-label="IPv6 networking problems with Docker defaults">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-can-go-wrong" class="md-nav__link">
-    What can go wrong?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-does-this-happen" class="md-nav__link">
-    Why does this happen?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prevent-ipv6-connections" class="md-nav__link">
-    Prevent IPv6 connections
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-proper-ipv6-support" class="md-nav__link">
-    Enable proper IPv6 support
-  </a>
-  
-    <nav class="md-nav" aria-label="Enable proper IPv6 support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-an-ipv6-subnet" class="md-nav__link">
-    Configuring an IPv6 subnet
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-remote-ip-is-correct" class="md-nav__link">
-    Verify remote IP is correct
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1402,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../podman/" class="md-nav__link">
+      <a href="../../../config/advanced/podman/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1422,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dovecot-master-accounts/" class="md-nav__link">
+      <a href="../../../config/advanced/dovecot-master-accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,19 +1360,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -1480,7 +1385,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -1529,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/basic-installation/" class="md-nav__link">
+      <a href="../../tutorials/basic-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1549,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/mailserver-behind-proxy/" class="md-nav__link">
+      <a href="../../tutorials/mailserver-behind-proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1569,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/crowdsec/" class="md-nav__link">
+      <a href="../../tutorials/crowdsec/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1589,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/docker-build/" class="md-nav__link">
+      <a href="../../tutorials/docker-build/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1609,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/blog-posts/" class="md-nav__link">
+      <a href="../../tutorials/blog-posts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1635,19 +1540,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
@@ -1660,7 +1565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Use Cases
@@ -1673,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/forward-only-mailserver-with-ldap-authentication/" class="md-nav__link">
+      <a href="../forward-only-mailserver-with-ldap-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1693,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/imap-folders/" class="md-nav__link">
+      <a href="../imap-folders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1711,9 +1616,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../examples/use-cases/ios-mail-push-support/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    iOS Mail Push Support
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1722,6 +1645,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-concerns" class="md-nav__link">
+    Privacy concerns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-configuration-options" class="md-nav__link">
+    Other configuration options
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1733,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/auth-lua/" class="md-nav__link">
+      <a href="../auth-lua/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1947,63 +1930,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ipv6-networking-problems-with-docker-defaults" class="md-nav__link">
-    IPv6 networking problems with Docker defaults
-  </a>
-  
-    <nav class="md-nav" aria-label="IPv6 networking problems with Docker defaults">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-can-go-wrong" class="md-nav__link">
-    What can go wrong?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-does-this-happen" class="md-nav__link">
-    Why does this happen?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prevent-ipv6-connections" class="md-nav__link">
-    Prevent IPv6 connections
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-proper-ipv6-support" class="md-nav__link">
-    Enable proper IPv6 support
-  </a>
-  
-    <nav class="md-nav" aria-label="Enable proper IPv6 support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-an-ipv6-subnet" class="md-nav__link">
-    Configuring an IPv6 subnet
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-remote-ip-is-correct" class="md-nav__link">
-    Verify remote IP is correct
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-concerns" class="md-nav__link">
+    Privacy concerns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-configuration-options" class="md-nav__link">
+    Other configuration options
+  </a>
   
 </li>
       
@@ -2022,7 +1986,7 @@
                   
 
   
-    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/config/advanced/ipv6.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/examples/use-cases/ios-mail-push-support.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2031,171 +1995,237 @@
     
       
     
-    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/config/advanced/ipv6.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/examples/use-cases/ios-mail-push-support.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-  <h1>IPv6</h1>
+  <h1>iOS Mail Push Support</h1>
 
-<div class="admonition bug">
-<p class="admonition-title">Ample Opportunities for Issues</p>
-<p>Numerous bug reports have been raised in the past about IPv6. Please make sure your setup around DMS is correct when using IPv6!</p>
-</div>
-<h2 id="ipv6-networking-problems-with-docker-defaults"><a class="toclink" href="#ipv6-networking-problems-with-docker-defaults">IPv6 networking problems with Docker defaults</a></h2>
-<h3 id="what-can-go-wrong"><a class="toclink" href="#what-can-go-wrong">What can go wrong?</a></h3>
-<p>If your host system supports IPv6 and an <code>AAAA</code> DNS record exists to direct IPv6 traffic to DMS, you may experience issues when an IPv6 connection is made:</p>
+<h2 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h2>
+<p>iOS Mail currently does not support the IMAP idle extension. Therefore users can only either check manually or configure intervals for fetching mails in their mail account preferences when using the default configuration.</p>
+<p>To support mail push Dovecot needs to advertise the <code>XAPPLEPUSHSERVICE</code> IMAP extension as well as sending the actual push notifications to the Apple Push Notification service (APNs) which will forward them to the device.</p>
+<p>This can be done with two components:</p>
 <ul>
-<li>The original client IP is replaced with the gateway IP of a docker network.</li>
-<li>Connections fail or hang.</li>
+<li>A Dovecot plugin (<code>dovecot-xaps-plugin</code>) which is triggered whenever a mail is created or moved from/to a mail folder.</li>
+<li>A daemon service (<code>dovecot-xaps-daemon</code>) that manages both the device registrations as well as sending notifications to the APNs.</li>
 </ul>
-<p>The impact of losing the real IP of the client connection can negatively affect DMS:</p>
+<h2 id="prerequisites"><a class="toclink" href="#prerequisites">Prerequisites</a></h2>
 <ul>
-<li>Users unable to login (<em>Fail2Ban action triggered by repeated login failures all seen as from the same internal Gateway IP</em>)</li>
-<li>Mail inbound to DMS is rejected (<em><a href="https://github.com/docker-mailserver/docker-mailserver/issues/1438">SPF verification failure</a>, IP mismatch</em>)</li>
-<li>Delivery failures from <a href="https://senderscore.org/assess/get-your-score/">sender reputation</a> being reduced (<em>due to <a href="https://github.com/docker-mailserver/docker-mailserver/pull/3057#issuecomment-1416700046">bouncing inbound mail</a> from rejected IPv6 clients</em>)</li>
-<li>Some services may be configured to trust connecting clients within the containers subnet, which includes the Gateway IP. This can risk bypassing or relaxing security measures, such as exposing an <a href="https://en.wikipedia.org/wiki/Open_mail_relay">open relay</a>.</li>
+<li>An Apple developer account to create the required Apple Push Notification service certificate.</li>
+<li>Knowledge creating Docker images, using the command-line, and creating shell scripts.</li>
 </ul>
-<h3 id="why-does-this-happen"><a class="toclink" href="#why-does-this-happen">Why does this happen?</a></h3>
-<p>When the host network receives a connection to a containers published port, it is routed to the containers internal network managed by Docker (<em>typically a bridge network</em>).</p>
-<p>By default, the Docker daemon only assigns IPv4 addresses to containers, thus it will only accept IPv4 connections (<em>unless a <code>docker-proxy</code> process is listening, which the default daemon setting <code>userland-proxy: true</code> enables</em>). With the daemon setting <code>userland-proxy: true</code> (default), IPv6 connections from the host can also be accepted and routed to containers (<em>even when they only have IPv4 addresses assigned</em>). <code>userland-proxy: false</code> will require the container to have atleast an IPv6 address assigned.</p>
-<p>This can be problematic for IPv6 host connections when internally the container is no longer aware of the original client IPv6 address, as it has been proxied through the IPv4 or IPv6 gateway address of it's connected network (<em>eg: <code>172.17.0.1</code> - Docker allocates networks from a set of <a href="https://straz.to/2021-09-08-docker-address-pools/#what-are-the-default-address-pools-when-no-configuration-is-given-vanilla-pools">default subnets</a></em>).</p>
-<p>This can be fixed by enabling a Docker network to assign IPv6 addresses to containers, along with some additional configuration. Alternatively you could configure the opposite to prevent IPv6 connections being made.</p>
-<h2 id="prevent-ipv6-connections"><a class="toclink" href="#prevent-ipv6-connections">Prevent IPv6 connections</a></h2>
+<h2 id="limitations"><a class="toclink" href="#limitations">Limitations</a></h2>
 <ul>
-<li>Avoiding an <code>AAAA</code> DNS record for your DMS FQDN would prevent resolving an IPv6 address to connect to.</li>
-<li>You can also use <code>userland-proxy: false</code>, which will fail to establish a remote connection to DMS (<em>provided no IPv6 address was assigned</em>).</li>
+<li>You need to maintain a custom <code>docker-mailserver</code> image.</li>
+<li>Push support is limited to the INBOX folder. Changes to other folders will not be pushed to the device regardless of the configuration settings.</li>
+<li>You currently cannot use the same account UUID on multiple devices. This means that if you use the same backup on multiple devices (e.g. old phone / new phone) only one of them will get the notification. Use different backups or recreate the mail account.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">With UFW or Firewalld</p>
-<p>When one of these firewall frontends are active, remote clients should fail to connect instead of being masqueraded as the docker network gateway IP. Keep in mind that this only affects remote clients, it does not affect local IPv6 connections originating within the same host.</p>
-</div>
-<h2 id="enable-proper-ipv6-support"><a class="toclink" href="#enable-proper-ipv6-support">Enable proper IPv6 support</a></h2>
-<p>You can enable IPv6 support in Docker for container networks, however <a href="../../debugging/#compatibility">compatibility concerns</a> may affect your success.</p>
-<p>The <a href="https://docs.docker.com/config/daemon/ipv6/">official Docker documentation on enabling IPv6</a> has been improving and is a good resource to reference.</p>
-<p>Enable <code>ip6tables</code> support so that Docker will manage IPv6 networking rules as well. This will allow for IPv6 NAT to work like the existing IPv4 NAT already does for your containers, avoiding the above issue with external connections having their IP address seen as the container network gateway IP (<em>provided an IPv6 address is also assigned to the container</em>).</p>
-<div class="admonition example">
-<p class="admonition-title">Configure the following in <code>/etc/docker/daemon.json</code></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;ip6tables&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;experimental&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;userland-proxy&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="p">}</span>
-</code></pre></div>
+<h2 id="privacy-concerns"><a class="toclink" href="#privacy-concerns">Privacy concerns</a></h2>
 <ul>
-<li><code>experimental: true</code> is currently required for <code>ip6tables: true</code> to work.</li>
-<li><code>userland-proxy</code> setting <a href="https://github.com/docker-mailserver/docker-mailserver/pull/3244#issuecomment-1603436809">can potentially affect connection behaviour</a> for local connections.</li>
+<li>The service does not send any part of the actual message to Apple.</li>
+<li>The information sent contains the device UUID to notify and the (on-device) account UUID which was generated by the iOS mail application when creating the account.</li>
+<li>Upon receiving the notification, the iOS mail application will connect to the IMAP server given by the provided account UUID and fetch the mail to notify the user.</li>
+<li>Apple therefore does not know the mail address for which the mail was received, only that a specific account on a specific device should be notified that a new mail or that a mail was moved to the INBOX folder.</li>
 </ul>
-<p>Now restart the daemon if it's running: <code>systemctl restart docker</code>.</p>
-</div>
-<p>Next, configure a network with an IPv6 subnet for your container with any of these examples:</p>
-<details class="example" open="open">
-<summary>Create an IPv6 ULA subnet</summary>
-<details class="info">
-<summary>About these examples</summary>
-<p>These examples are focused on a <a href="https://en.wikipedia.org/wiki/Unique_local_address">IPv6 ULA subnet</a> which is suitable for most users as described in the next section.</p>
-<ul>
-<li>You may prefer a subnet size smaller than <code>/64</code> (eg: <code>/112</code>, which still provides over 65k IPv6 addresses), especially if instead configuring for an IPv6 GUA subnet.</li>
-<li>The network will also implicitly be assigned an IPv4 subnet (<em>from the Docker daemon config <code>default-address-pools</code></em>).</li>
-</ul>
-</details>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">User-defined Network</label><label for="__tabbed_1_2">Default Bridge (daemon)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>The preferred approach is with <a href="https://docs.docker.com/config/daemon/ipv6/#create-an-ipv6-network">user-defined networks</a> via <code>compose.yaml</code> (recommended) or CLI with <code>docker network create</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Compose</label><label for="__tabbed_2_2">CLI</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Create the network in <code>compose.yaml</code> and attach a service to it:</p>
-<div class="highlight"><span class="filename">compose.yaml</span><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dms-ipv6</span>
+<h2 id="installation"><a class="toclink" href="#installation">Installation</a></h2>
+<p>Both components will be built using Docker and included into a custom <code>docker-mailserver</code> image. Afterwards the required configuration is added to <code>docker-data/dms/config</code>. The registration data is stored in <code>/var/mail-state/lib-xapsd</code>.</p>
+<ol>
+<li>
+<p>Create a Dockerfile to build a <code>docker-mailserver</code> image that includes the <a href="https://github.com/freswa/dovecot-xaps-plugin"><code>dovecot-xaps-plugin</code></a> as well as the <a href="https://github.com/freswa/dovecot-xaps-daemon"><code>dovecot-xaps-daemon</code></a>. This is required to ensure that the Dovecot plugin is built against the same Dovecot version. The <code>:edge</code> tag is used here, but you might want to use a released version instead.</p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">mailserver/docker-mailserver:edge</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">dovecot-plugin-xaps</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/tmp/dovecot-xaps-plugin</span>
+<span class="k">RUN</span><span class="w"> </span>&lt;&lt;EOF
+<span class="w">    </span>apt-get<span class="w"> </span>update
+<span class="w">    </span>apt-get<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>cmake<span class="w"> </span>make<span class="w"> </span>build-essential<span class="w"> </span>dovecot-dev
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>--single-branch<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/freswa/dovecot-xaps-plugin.git<span class="w"> </span>.
+<span class="w">    </span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+<span class="w">    </span>cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+<span class="w">    </span>make<span class="w"> </span>install
+EOF
 
-<span class="nt">networks</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">dms-ipv6</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">enable_ipv6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">ipam</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">config</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fd00:cafe:face:feed::/64</span>
-</code></pre></div>
-<details class="tip">
-<summary>Override the implicit <code>default</code> network</summary>
-<p>You can optionally avoid the service assignment by <a href="docker-docs-network-compose-default">overriding the <code>default</code> user-defined network that Docker Compose generates</a>. Just replace <code>dms-ipv6</code> with <code>default</code>.</p>
-<p>The Docker Compose <code>default</code> bridge is not affected by settings for the default <code>bridge</code> (aka <code>docker0</code>) in <code>/etc/docker/daemon.json</code>.</p>
-</details>
-<details class="tip">
-<summary>Using the network outside of this <code>compose.yaml</code></summary>
-<p>To reference this network externally (<em>from other compose files or <code>docker run</code></em>), assign the <a href="https://docs.docker.com/compose/compose-file/06-networks/#name">networks <code>name</code> key in <code>compose.yaml</code></a>.</p>
-</details>
-</div>
-<div class="tabbed-block">
-<p>Create the network via a CLI command (<em>which can then be used with <code>docker run --network dms-ipv6</code></em>):</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>--ipv6<span class="w"> </span>--subnet<span class="w"> </span>fd00:cafe:face:feed::/64<span class="w"> </span>dms-ipv6
-</code></pre></div>
-<p>Optionally reference it from one or more <code>compose.yaml</code> files:</p>
-<div class="highlight"><span class="filename">compose.yaml</span><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dms-ipv6</span>
+<span class="c"># Use an older Go version as Go &gt;= 1.20 causes this issue: https://github.com/freswa/dovecot-xaps-daemon/issues/24#issuecomment-1483876081</span>
+<span class="c"># Note that the underlying issue are non-standard-compliant Apple http servers which might get fixed at some point</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">golang:1.19-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">dovecot-xaps-daemon</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">GOPROXY</span><span class="o">=</span>https://proxy.golang.org,direct
+<span class="k">ENV</span><span class="w"> </span><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/go/dovecot-xaps-daemon</span>
+<span class="k">RUN</span><span class="w"> </span>&lt;&lt;EOF
+<span class="w">    </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span>--virtual<span class="w"> </span>build-dependencies<span class="w"> </span>git
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>--single-branch<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/freswa/dovecot-xaps-daemon<span class="w"> </span>.
+<span class="w">    </span>go<span class="w"> </span>build<span class="w"> </span>./cmd/xapsd
+EOF
 
-<span class="nt">networks</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">dms-ipv6</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">mailserver/docker-mailserver:edge</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>dovecot-plugin-xaps<span class="w"> </span>/usr/lib/dovecot/modules/*_xaps_*<span class="w"> </span>/usr/lib/dovecot/modules/
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>dovecot-xaps-daemon<span class="w"> </span>/go/dovecot-xaps-daemon/xapsd<span class="w"> </span>/usr/bin/xapsd
+
+<span class="c"># create a non-root user for the daemon process as well as configuration and run state directories</span>
+<span class="k">RUN</span><span class="w"> </span>&lt;&lt;EOF
+<span class="w">    </span>adduser<span class="w"> </span>--quiet<span class="w"> </span>--system<span class="w"> </span>--group<span class="w"> </span>--disabled-password<span class="w"> </span>--home<span class="w"> </span>/var/mail-state/lib-xapsd<span class="w"> </span>--no-create-home<span class="w"> </span>xapsd
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/run/xapsd<span class="w"> </span>/etc/xapsd
+EOF
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="admonition warning">
-<p class="admonition-title">This approach is discouraged</p>
-<p>The <a href="https://docs.docker.com/network/drivers/bridge/#use-the-default-bridge-network"><code>bridge</code> network is considered legacy</a>.</p>
-</div>
-<p>Add these two extra IPv6 settings to your daemon config. They only apply to the <a href="https://docs.docker.com/config/daemon/ipv6/#use-ipv6-for-the-default-bridge-network">default <code>bridge</code> docker network</a> aka <code>docker0</code> (<em>which containers are attached to by default when using <code>docker run</code></em>).</p>
-<div class="highlight"><span class="filename">/etc/docker/daemon.json</span><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;ipv6&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;fixed-cidr-v6&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fd00:cafe:face:feed::/64&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Compose projects can also use this network via <code>network_mode</code>:</p>
-<div class="highlight"><span class="filename">compose.yaml</span><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</details>
-<div class="admonition danger">
-<p class="admonition-title">Do not use <code>2001:db8:1::/64</code> for your private subnet</p>
-<p>The <code>2001:db8</code> address prefix is <a href="https://en.wikipedia.org/wiki/IPv6_address#Documentation">reserved for documentation</a>. Avoid creating a subnet with this prefix.</p>
-<p>Presently this is used in examples for Dockers IPv6 docs as a placeholder, while mixed in with private IPv4 addresses which can be misleading.</p>
-</div>
-<h3 id="configuring-an-ipv6-subnet"><a class="toclink" href="#configuring-an-ipv6-subnet">Configuring an IPv6 subnet</a></h3>
-<p>If you've <a href="https://docs.docker.com/config/daemon/ipv6/#dynamic-ipv6-subnet-allocation">configured IPv6 address pools in <code>/etc/docker/daemon.json</code></a>, you do not need to specify a subnet explicitly. Otherwise if you're unsure what value to provide, here's a quick guide (<em>Tip: Prefer IPv6 ULA, it's the least hassle</em>):</p>
+</li>
+<li>
+<p>Build the new image:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>yourname/docker-mailserver<span class="w"> </span>.
+</code></pre></div></p>
+</li>
+<li>
+<p>Modify your <code>compose.yaml</code> to use the newly created image:
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mailserver</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yourname/docker-mailserver:latest</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Recreate the container:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>down
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a hash of your Apple developer account password using the provided <code>xapsd -pass</code> command:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mailserver<span class="w"> </span>xapsd<span class="w"> </span>-pass
+</code></pre></div></p>
+</li>
+<li>
+<p>Add configuration for both components:</p>
 <ul>
-<li><code>fd00:cafe:face:feed::/64</code> is an example of a <a href="https://en.wikipedia.org/wiki/Unique_local_address">IPv6 ULA subnet</a>. ULA addresses are akin to the <a href="https://en.wikipedia.org/wiki/Private_network#Private_IPv4_addresses">private IPv4 subnets</a> you may already be familiar with. You can use that example, or choose your own ULA address. This is a good choice for getting Docker containers to their have networks support IPv6 via NAT like they already do by default with IPv4.</li>
-<li>IPv6 without NAT, using public address space like your server is assigned belongs to an <a href="https://en.wikipedia.org/wiki/IPv6#Global_addressing">IPv6 GUA subnet</a>.<ul>
-<li>Typically these will be a <code>/64</code> block assigned to your host, but this varies by provider.</li>
-<li>These addresses do not need to publish ports of a container to another IP to be publicly reached (<em>thus <code>ip6tables: true</code> is not required</em>), you will want a firewall configured to manage which ports are accessible instead as no NAT is involved. Note that this may not be desired if the container should also be reachable via the host IPv4 public address.</li>
-<li>You may want to subdivide the <code>/64</code> into smaller subnets for Docker to use only portions of the <code>/64</code>. This can reduce some routing features, and <a href="https://github.com/docker-mailserver/docker-mailserver/pull/3244#issuecomment-1528984894">require additional setup / management via a NDP Proxy</a> for your public interface to know of IPv6 assignments managed by Docker and accept external traffic.</li>
+<li>
+<p>Create a folder named <code>xaps</code> in <code>docker-data/dms/config</code>.</p>
+</li>
+<li>
+<p>Create a file named <code>xapsd.yaml</code> in <code>docker-data/dms/config/xaps</code>. </p>
+<ul>
+<li>Replace <code>appleId</code> and <code>appleIdHashedPassword</code> with your actual credentials. For reference see also <a href="https://github.com/freswa/dovecot-xaps-daemon/blob/master/configs/xapsd/xapsd.yaml">here</a>.</li>
+<li>The service will use the provided username/hash combination to automatically request a new certificate from Apple as well as renewing an older certificate if needed.</li>
 </ul>
+<div class="highlight"><span class="filename">xapsd.yaml</span><pre><span></span><code><span class="c1"># set the loglevel to either</span>
+<span class="c1"># trace, debug, error, fatal, info, panic or warn</span>
+<span class="c1"># Default: info</span>
+<span class="nt">loglevel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info</span>
+
+<span class="c1"># xapsd creates a json file to store the registration persistent on disk.</span>
+<span class="c1"># This sets the location of the file.</span>
+<span class="nt">databaseFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/mail-state/lib-xapsd/database.json</span>
+
+<span class="c1"># xapsd listens on a socket for http/https requests from the dovecot plugin.</span>
+<span class="c1"># This sets the address and port number of the listen socket.</span>
+<span class="nt">listenAddr</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;127.0.0.1&#39;</span>
+<span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11619</span>
+
+<span class="c1"># xapsd is able to listen on a HTTPS Socket to allow HTTP/2 to be used</span>
+<span class="c1"># SSL is enabled implicitly when certfile and keyfile exist</span>
+<span class="c1"># !!! only use HTTPS for connection pooling with a proxy e.g. nginx or HaProxy</span>
+<span class="c1"># !!! direct usage with the plugin is discouraged and unsupported</span>
+<span class="nt">tlsCertfile</span><span class="p">:</span>
+<span class="nt">tlsKeyfile</span><span class="p">:</span>
+<span class="nt">tlsListenAddr</span><span class="p">:</span>
+<span class="nt">tlsPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11620</span>
+
+<span class="c1"># Notifications that are not initiated by new messages are not sent immediately for two reasons:</span>
+<span class="c1"># 1. When you move/copy/delete messages you most likely move/copy/delete more messages within a short period of time.</span>
+<span class="c1"># 2. You don&#39;t need your mailboxes to synchronize immediately since they are automatically synchronized when opening</span>
+<span class="c1">#    the app</span>
+<span class="c1"># If a new message comes and the move/copy/delete notification is still on hold it will be sent with the notification</span>
+<span class="c1"># for the new message.</span>
+<span class="c1"># This sets the interval to check for delayed messages.</span>
+<span class="nt">checkInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+
+<span class="c1"># Set the time how long notifications for not-new messages should be delayed until they are sent.</span>
+<span class="c1"># Whenever checkInterval runs, it checks if &quot;delay&quot; &lt;= &quot;waiting time&quot; and sends the notification if the expression is</span>
+<span class="c1"># true.</span>
+<span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="c1"># To retrieve certificates from Apple, we need to login with a valid Apple ID</span>
+<span class="c1"># The accounts email must be given in cleartext, but the password has to</span>
+<span class="c1"># be hashed before sending it. To not leak working credentials on running servers,</span>
+<span class="c1"># we do not accept the cleartext password here.</span>
+<span class="nt">appleId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo@example.com</span>
+
+<span class="c1"># use `xaps -pass` to calculate the hash of the apple id password</span>
+<span class="nt">appleIdHashedPassword</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar</span>
+</code></pre></div>
+</li>
+<li>
+<p>Create a file named <code>95-xaps.conf</code> in <code>docker-data/dms/config/xaps</code>. For reference see also <a href="https://github.com/freswa/dovecot-xaps-plugin/blob/master/xaps.conf">here</a>.
+    <div class="highlight"><span class="filename">95-xaps.conf</span><pre><span></span><code>protocol imap {
+  mail_plugins = $mail_plugins notify push_notification xaps_push_notification xaps_imap
+}
+
+protocol lda {
+  mail_plugins = $mail_plugins notify push_notification xaps_push_notification
+}
+
+protocol lmtp {
+  mail_plugins = $mail_plugins notify push_notification xaps_push_notification
+}
+
+plugin {
+    # xaps_config contains xaps specific configuration parameters
+    # url:              protocol, hostname and port under which xapsd listens
+    # user_lookup: Use if you want to determine the username used for PNs from environment variables provided by
+    #                   login mechanism. Value is variable name to look up.
+    # max_retries:      maximum num of retries the http client connects to the xaps daemon
+    # timeout_msecs     http timeout of the http connection
+    xaps_config = url=http://127.0.0.1:11619 user_lookup=theattribute max_retries=6 timeout_msecs=5000
+    push_notification_driver = xaps
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a supervisord file named <code>xapsd.conf</code> in <code>docker-data/dms/config/xaps</code> with the following content:
+    <div class="highlight"><span class="filename">xapsd.conf</span><pre><span></span><code>[program:xapsd]
+startsecs=0
+autostart=false
+autorestart=true
+stdout_logfile=/var/log/supervisor/%(program_name)s.log
+stderr_logfile=/var/log/supervisor/%(program_name)s.log
+user=xapsd
+command=/usr/bin/xapsd
+pidfile=/var/run/xapsd/xapsd.pid
+</code></pre></div></p>
+</li>
+<li>
+<p>Create or update your <code>user-patches.sh</code> in <code>docker-data/dms/config</code> to move the files to their final location as well as starting the daemon service:
+    <div class="highlight"><span class="filename">user-patches.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Copy the configs to internal locations:</span>
+cp<span class="w"> </span>/tmp/docker-mailserver/xaps/95-xaps.conf<span class="w"> </span>/etc/dovecot/conf.d/95-xaps.conf
+cp<span class="w"> </span>/tmp/docker-mailserver/xaps/xapsd.yaml<span class="w"> </span>/etc/xapsd/xapsd.yaml
+cp<span class="w"> </span>/tmp/docker-mailserver/xaps/xapsd.conf<span class="w"> </span>/etc/supervisor/conf.d/xapsd.conf
+
+<span class="c1"># Setup data persistence and ensure ownership is always for xapsd:</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>/var/mail-state/lib-xapsd
+chown<span class="w"> </span>-R<span class="w"> </span>xapsd:xapsd<span class="w"> </span>/var/mail-state/lib-xapsd
+
+<span class="c1"># Start the xaps daemon:</span>
+supervisorctl<span class="w"> </span>update
+supervisorctl<span class="w"> </span>start<span class="w"> </span>xapsd
+</code></pre></div></p>
 </li>
 </ul>
-<h3 id="verify-remote-ip-is-correct"><a class="toclink" href="#verify-remote-ip-is-correct">Verify remote IP is correct</a></h3>
-<p>With Docker CLI or Docker Compose, run a <code>traefik/whoami</code> container with your IPv6 docker network and port 80 published. You can then send a curl request (or via address in the browser) from another host (as your remote client) with an IPv6 network, the <code>RemoteAddr</code> value returned should match your client IPv6 address.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-d<span class="w"> </span>--network<span class="w"> </span>dms-ipv6<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>traefik/whoami
-<span class="c1"># On a different host, replace `2001:db8::1` with your DMS host IPv6 address</span>
-curl<span class="w"> </span>--max-time<span class="w"> </span><span class="m">5</span><span class="w"> </span>http://<span class="o">[</span><span class="m">2001</span>:db8::1<span class="o">]</span>:80
+</li>
+<li>
+<p>Recreate the container again to apply the new configuration:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>down
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+</li>
+<li>
+<p>Recreate your mail account on your iOS device and check the logs in <code>/var/log/supervisor/dovecot.log</code> and <code>/var/log/supervisor/xapsd.log</code> for any errors.</p>
+</li>
+</ol>
+<h2 id="other-configuration-options"><a class="toclink" href="#other-configuration-options">Other configuration options</a></h2>
+<p>Both device registration and notifications send a username to the daemon to lookup the device. While the registration and other IMAP operations in Dovecot will send the Dovecot username, LMTP will send the provided authentication username.</p>
+<p>The format of that username is specified by the <code>auth_username_format</code> Dovecot setting. If you are not using mail addresses as Dovecot usernames - e.g. when using LDAP - you can either change the <code>auth_username_format</code> or add the mail address as property to the user account and use the lookup feature (see below).</p>
+<div class="highlight"><span class="filename">user-patches.sh</span><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;s|^#?(auth_username_format =).*|\1 %Ln|&quot;</span><span class="w"> </span>/etc/dovecot/conf.d/10-auth.conf
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">IPv6 ULA address priority</p>
-<p>DNS lookups that have records for both IPv4 and IPv6 addresses (<em>eg: <code>localhost</code></em>) may prefer IPv4 over IPv6 (ULA) for private addresses, whereas for public addresses IPv6 has priority. This shouldn't be anything to worry about, but can come across as a surprise when testing your IPv6 setup on the same host instead of from a remote client.</p>
-<p>The preference can be controlled with <a href="https://linux.die.net/man/5/gai.conf"><code>/etc/gai.conf</code></a>, and appears was configured this way based on <a href="https://thomas-leister.de/en/lxd-prefer-ipv6-outgoing/">the assumption that IPv6 ULA would never be used with NAT</a>. It should only affect the destination resolved for outgoing connections, which for IPv6 ULA should only really affect connections between your containers / host. In future <a href="https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-ula">IPv6 ULA may also be prioritized</a>.</p>
-</div>
+<p>You can also use notifications for Dovecot alias mailboxes. Depending on your server configuration, this might require to add the original Dovecot username as <a href="https://doc.dovecot.org/configuration_manual/authentication/user_database_extra_fields/">Dovecot attribute</a> to the login user as well as changing the <code>user_lookup=theattribute</code> in <code>95-xaps.conf</code> to perform the lookup of that attribute.</p>
 
 
 
