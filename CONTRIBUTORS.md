@@ -1446,6 +1446,13 @@ Thanks goes to these wonderful people ✨
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/p3dda">
+            <img src="https://avatars.githubusercontent.com/u/2871413?v=4" width="100;" alt="p3dda"/>
+            <br />
+            <sub><b>p3dda</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/peter-hartmann">
             <img src="https://avatars.githubusercontent.com/u/20216585?v=4" width="100;" alt="peter-hartmann"/>
             <br />
